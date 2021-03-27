@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 
 void main() {
@@ -36,12 +34,12 @@ class CalculadoraBody extends StatefulWidget {
 }
 
 class _LogicaCalculadora extends State<CalculadoraBody> {
-  // Peso e Altura digitada:
+  // Peso e Altura digitada pela pessoa:
   TextEditingController _alturaDigitada = TextEditingController();
   TextEditingController _pesoDigitado = TextEditingController();
 
-  // Resultado apresentado:
-  var msg_resultadoIMC = '';
+  // Resultado apresentado no final:
+  var msgResultadoIMC = '';
 
   // Métodos para cálculo e classificação do IMC do indivíduo:
 
@@ -72,9 +70,55 @@ class _LogicaCalculadora extends State<CalculadoraBody> {
     }
   }
 
+  void calcularIMC() {
+    double valorPeso = double.tryParse(_pesoDigitado.text);
+    double valorAltura = double.tryParse(_alturaDigitada.text);
+
+    if (valorPeso != null && valorAltura != null) {
+      double imcGerado = calculoIMC(valorPeso, valorAltura);
+      String resultadoIMC = classificacaoIMC(imcGerado);
+
+      setState(() {
+        msgResultadoIMC = "Classificação do seu IMC: $resultadoIMC";
+      });
+    } else {
+      setState(() {
+        msgResultadoIMC = "Valores do peso ou altura vazios.";
+      });
+    }
+  }
+
+  void esvaziarValoresDigitados() {
+    setState(() {
+      _pesoDigitado.text = " ";
+      _alturaDigitada.text = " ";
+    });
+  }
+
   // Método p/ criação do meu Container:
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      padding: new EdgeInsets.all(20),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisSize: MainAxisSize.max,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+
+          Padding(
+            padding: const EdgeInsets.all(8),
+            child: Text(
+              'Digite seu peso em quilos e altura em centímetros:',
+              style: TextStyle(
+                fontSize: 20,
+                color: Colors.grey[900]
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ),
+
+        ]),
+    );
   }
 }
