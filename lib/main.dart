@@ -36,7 +36,6 @@ class CalculadoraBody extends StatefulWidget {
 class _LogicaCalculadora extends State<CalculadoraBody> {
   
 
-  
   // Método p/ criação do meu Container:
   @override
   Widget build(BuildContext context) {
