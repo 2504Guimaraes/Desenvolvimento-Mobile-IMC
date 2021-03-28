@@ -116,6 +116,7 @@ class _LogicaCalculadora extends State<CalculadoraBody> {
             TextField(
               controller: _pesoDigitado,
               decoration: InputDecoration(
+                labelText: 'Digite seu peso',
                 hintText: 'Exemplo: 80 (kgs)',
                 hintStyle: TextStyle(color: Colors.grey[900]),
               ),
@@ -123,6 +124,7 @@ class _LogicaCalculadora extends State<CalculadoraBody> {
             TextField(
               controller: _alturaDigitada,
               decoration: InputDecoration(
+                labelText: 'Digite sua altura',
                 hintText: 'Exemplo: 1.80 (metros)',
                 hintStyle: TextStyle(color: Colors.grey[900]),
               ),
@@ -134,14 +136,16 @@ class _LogicaCalculadora extends State<CalculadoraBody> {
               children: [
                 Container(
                   width: 320,
-                  margin: const EdgeInsets.only(top: 10),
+                  margin: const EdgeInsets.only(top: 15),
                   child: RaisedButton(
+                    padding: EdgeInsets.fromLTRB(10, 15, 10, 15),
                     onPressed: () {
-                      // funções a serem eecutadas no clique:
+                      calcularIMC();
+                      esvaziarValoresDigitados();
                     },
                     color: Colors.pinkAccent[400],
                     child: Text(
-                      'Calcular IMC',
+                      'Calcular seu IMC',
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
@@ -150,6 +154,17 @@ class _LogicaCalculadora extends State<CalculadoraBody> {
                   ),
                 ),
               ],
+            ),
+            Padding(
+              padding: EdgeInsets.all(25),
+              child: Text(
+                msgResultadoIMC,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.black
+                )
+              ),
             )
           ]),
     );
