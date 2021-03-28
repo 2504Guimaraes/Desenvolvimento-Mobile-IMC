@@ -1,7 +1,7 @@
 ## Flutter - Desenvolvimento para Dispositivos Móveis I
 ### Aplicativo Cálculo IMC
 
-Annotações das primeiras aulas com a framework para desenvolvimento mobile chamada Flutter. Código puramente para consulta caso necessário.
+Anotações das primeiras aulas com a framework para desenvolvimento mobile chamada Flutter. Código puramente para consulta caso necessário.
 
 ### Observações Importantes
 
@@ -22,3 +22,7 @@ O aplicativo está organizado em pacotes separados, cada um sendo responsável p
     1.1.1.1 - Arquivo que contém as funções da sua pasta mãe. 
     1.1.2 - Primeira página do aplicativo de IMC.
     1.2 - Classe responsável por renderizar o aplicativo no celular.
+
+### Aviso:
+
+Caso a pessoa deseje deixar todo o código junto, é perfeitamente possível excluir todas essas pastas adicionais, e deixar todo o código contido dentro de [logicaEstado.dart]('https://github.com/2504Guimaraes/Desenvolvimento-Mobile-IMC/blob/master/lib/AppCalculadora/Logica_e_Estado/logicaEstado.dart') e [pagina1Calculadora.dart]('https://github.com/2504Guimaraes/Desenvolvimento-Mobile-IMC/blob/master/lib/AppCalculadora/pagina1Calculadora.dart') dentro de [main.dart]('https://github.com/2504Guimaraes/Desenvolvimento-Mobile-IMC/blob/master/lib/main.dart').
