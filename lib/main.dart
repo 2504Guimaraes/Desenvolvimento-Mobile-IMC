@@ -101,24 +101,57 @@ class _LogicaCalculadora extends State<CalculadoraBody> {
     return Container(
       padding: new EdgeInsets.all(20),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        mainAxisSize: MainAxisSize.max,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-
-          Padding(
-            padding: const EdgeInsets.all(8),
-            child: Text(
-              'Digite seu peso em quilos e altura em centímetros:',
-              style: TextStyle(
-                fontSize: 20,
-                color: Colors.grey[900]
+          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisSize: MainAxisSize.max,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8),
+              child: Text(
+                'Digite seu peso em quilos e altura em metros:',
+                style: TextStyle(fontSize: 18, color: Colors.grey[900]),
+                textAlign: TextAlign.center,
               ),
-              textAlign: TextAlign.center,
             ),
-          ),
-
-        ]),
+            TextField(
+              controller: _pesoDigitado,
+              decoration: InputDecoration(
+                hintText: 'Exemplo: 80 (kgs)',
+                hintStyle: TextStyle(color: Colors.grey[900]),
+              ),
+            ),
+            TextField(
+              controller: _alturaDigitada,
+              decoration: InputDecoration(
+                hintText: 'Exemplo: 1.80 (metros)',
+                hintStyle: TextStyle(color: Colors.grey[900]),
+              ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisSize: MainAxisSize.max,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  width: 320,
+                  margin: const EdgeInsets.only(top: 10),
+                  child: RaisedButton(
+                    onPressed: () {
+                      // funções a serem eecutadas no clique:
+                    },
+                    color: Colors.pinkAccent[400],
+                    child: Text(
+                      'Calcular IMC',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            )
+          ]),
     );
   }
 }
