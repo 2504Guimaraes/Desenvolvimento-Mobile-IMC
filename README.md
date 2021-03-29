@@ -10,7 +10,7 @@ O aplicativo está organizado em pacotes separados, cada um sendo responsável p
 - 📁 1 - lib
     - 📁 1.1 - AppCalculadora
         - 📁 1.1.1 - Logica_e_Estado
-            - 📜 1.1.1.1 - logicaEstado.dart 
+            - 📜 1.1.1.1 - logicaEstadoPagina1.dart 
         - 📜 1.1.2 - pagina1Calculadora.dart
         - 📜 1.1.3 - pagina2Calculadora.dart (Tabela IMC) 
     - 📜 1.2 - main.dart 
@@ -27,4 +27,4 @@ O aplicativo está organizado em pacotes separados, cada um sendo responsável p
 
 ### Aviso Importante
 
-Caso a pessoa deseje deixar todo o código junto, é perfeitamente possível excluir todas essas pastas adicionais, e deixar todo o código contido em [logicaEstado.dart](https://github.com/2504Guimaraes/Desenvolvimento-Mobile-IMC/blob/master/lib/AppCalculadora/Logica_e_Estado/logicaEstado.dart), [pagina1Calculadora.dart](https://github.com/2504Guimaraes/Desenvolvimento-Mobile-IMC/blob/master/lib/AppCalculadora/pagina1Calculadora.dart) e [pagina2Calculadora.dart](https://github.com/2504Guimaraes/Desenvolvimento-Mobile-IMC/blob/master/lib/AppCalculadora/pagina2Calculadora.dart) dentro de [main.dart](https://github.com/2504Guimaraes/Desenvolvimento-Mobile-IMC/blob/master/lib/main.dart).
+Caso a pessoa deseje deixar todo o código junto, é perfeitamente possível excluir todas essas pastas adicionais, e deixar todo o código contido em [logicaEstadoPagina1.dart](https://github.com/2504Guimaraes/Desenvolvimento-Mobile-IMC/blob/master/lib/AppCalculadora/Logica_e_Estado/logicaEstadoPagina1.dart), [pagina1Calculadora.dart](https://github.com/2504Guimaraes/Desenvolvimento-Mobile-IMC/blob/master/lib/AppCalculadora/pagina1Calculadora.dart) e [pagina2Calculadora.dart](https://github.com/2504Guimaraes/Desenvolvimento-Mobile-IMC/blob/master/lib/AppCalculadora/pagina2Calculadora.dart) dentro de [main.dart](https://github.com/2504Guimaraes/Desenvolvimento-Mobile-IMC/blob/master/lib/main.dart).
