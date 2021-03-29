@@ -8,7 +8,7 @@ class PaginaCalculadora extends StatelessWidget {
       appBar: AppBar(
         title: Text('Calculadora de IMC'),
         centerTitle: true,
-        backgroundColor: Colors.pinkAccent[400],
+        backgroundColor: Colors.teal[700],
       ),
       body: CalculadoraBody(),
     );

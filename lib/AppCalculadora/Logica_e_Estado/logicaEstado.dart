@@ -42,6 +42,8 @@ class _LogicaCalculadora extends State<CalculadoraBody> {
     }
   }
 
+  // Método para avaliar se valor digitado é um número ou não:
+
   void calcularIMC() {
     double valorPeso = double.tryParse(_pesoDigitado.text);
     double valorAltura = double.tryParse(_alturaDigitada.text);
@@ -55,7 +57,7 @@ class _LogicaCalculadora extends State<CalculadoraBody> {
       });
     } else {
       setState(() {
-        msgResultadoIMC = "Valores do peso ou altura vazios.";
+        msgResultadoIMC = "Valores vazios ou inválidos.";
       });
     }
   }
@@ -110,17 +112,40 @@ class _LogicaCalculadora extends State<CalculadoraBody> {
                   width: 320,
                   margin: const EdgeInsets.only(top: 15),
                   child: RaisedButton(
-                    padding: EdgeInsets.fromLTRB(10, 15, 10, 15),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(3))),
+                    padding: EdgeInsets.fromLTRB(15, 10, 4, 10),
                     onPressed: () {
                       calcularIMC();
                       esvaziarValoresDigitados();
                     },
-                    color: Colors.pinkAccent[400],
-                    child: Text(
-                      'Calcular seu IMC',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
+                    textColor: Colors.white,
+                    color: Colors.green[600],
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: <Widget>[
+                          Container(
+                            color: Colors.transparent,
+                            padding: EdgeInsets.fromLTRB(95, 3, 55, 3),
+                            child: Text(
+                              'Calcular IMC',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18,
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
+                            child: Icon(
+                              Icons.arrow_right_sharp,
+                              color: Colors.white,
+                              size: 35,
+                            ),
+                          )
+                        ],
                       ),
                     ),
                   ),
@@ -129,14 +154,9 @@ class _LogicaCalculadora extends State<CalculadoraBody> {
             ),
             Padding(
               padding: EdgeInsets.all(25),
-              child: Text(
-                msgResultadoIMC,
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 18,
-                  color: Colors.black
-                )
-              ),
+              child: Text(msgResultadoIMC,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 18, color: Colors.black)),
             )
           ]),
     );
