@@ -11,7 +11,8 @@ O aplicativo está organizado em pacotes separados, cada um sendo responsável p
     - 📁 1.1 - AppCalculadora
         - 📁 1.1.1 - Logica_e_Estado
             - 📜 1.1.1.1 - logicaEstado.dart 
-        - 📜 1.1.2 - pagina1Calculadora.dart 
+        - 📜 1.1.2 - pagina1Calculadora.dart
+        - 📜 1.1.3 - pagina2Calculadora.dart (Tabela IMC) 
     - 📜 1.2 - main.dart 
 
 #### Organização das pastas acima ⬆️ :
@@ -21,8 +22,9 @@ O aplicativo está organizado em pacotes separados, cada um sendo responsável p
     1.1.1 - Pasta a qual contém configurações de lógica e do estado da primeira página do aplicativo.
     1.1.1.1 - Arquivo que contém as funções da sua pasta mãe. 
     1.1.2 - Primeira página do aplicativo de IMC.
+    1.1.3 - Segunda página do aplicativo de IMC.
     1.2 - Classe responsável por renderizar o aplicativo no celular.
 
 ### Aviso Importante
 
-Caso a pessoa deseje deixar todo o código junto, é perfeitamente possível excluir todas essas pastas adicionais, e deixar todo o código contido dentro de [logicaEstado.dart](https://github.com/2504Guimaraes/Desenvolvimento-Mobile-IMC/blob/master/lib/AppCalculadora/Logica_e_Estado/logicaEstado.dart) e [pagina1Calculadora.dart](https://github.com/2504Guimaraes/Desenvolvimento-Mobile-IMC/blob/master/lib/AppCalculadora/pagina1Calculadora.dart) dentro de [main.dart](https://github.com/2504Guimaraes/Desenvolvimento-Mobile-IMC/blob/master/lib/main.dart).
+Caso a pessoa deseje deixar todo o código junto, é perfeitamente possível excluir todas essas pastas adicionais, e deixar todo o código contido dentro de [logicaEstado.dart](https://github.com/2504Guimaraes/Desenvolvimento-Mobile-IMC/blob/master/lib/AppCalculadora/Logica_e_Estado/logicaEstado.dart), [pagina1Calculadora.dart](https://github.com/2504Guimaraes/Desenvolvimento-Mobile-IMC/blob/master/lib/AppCalculadora/pagina1Calculadora.dart) e [pagina2Calculadora.dart](#) dentro de [main.dart](https://github.com/2504Guimaraes/Desenvolvimento-Mobile-IMC/blob/master/lib/main.dart).
